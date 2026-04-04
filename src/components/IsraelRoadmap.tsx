@@ -5,9 +5,10 @@ import {
   markerDiameterViewBox,
   type JournalMarker,
 } from "../data/markers";
+import { publicAsset } from "../lib/publicAsset";
 import { CheckBadge } from "./MarkerIcons";
 
-const MAP_IMG = "/images/map-emotional-base.jpg";
+const MAP_IMG = publicAsset("images/map-emotional-base.jpg");
 
 /** Tap target: generous hit area around each mark. */
 const HIT_R = 38;

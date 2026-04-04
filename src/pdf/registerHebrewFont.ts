@@ -4,9 +4,10 @@ let registered = false;
 
 export function registerHebrewFont() {
   if (registered) return;
+  const fontUrl = `${import.meta.env.BASE_URL}fonts/NotoSansHebrew-Regular.ttf`;
   Font.register({
     family: "NotoSansHebrew",
-    src: "/fonts/NotoSansHebrew-Regular.ttf",
+    src: fontUrl,
   });
   registered = true;
 }

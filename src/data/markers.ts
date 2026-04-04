@@ -1,3 +1,4 @@
+import { publicAsset } from "../lib/publicAsset";
 import {
   FIGMA_MAP_HEIGHT,
   FIGMA_MAP_WIDTH,
@@ -16,9 +17,9 @@ const MARK_FIGMA_DIAMETER: Record<MarkerKind, number> = {
 
 /** Raster for each kind (`public/images/markers/`). */
 export const MARK_ICON_SRC: Record<MarkerKind, string> = {
-  fuel: "/images/markers/mark-fuel.png",
-  traffic: "/images/markers/mark-traffic.png",
-  star: "/images/markers/mark-star.png",
+  fuel: publicAsset("images/markers/mark-fuel.png"),
+  traffic: publicAsset("images/markers/mark-traffic.png"),
+  star: publicAsset("images/markers/mark-star.png"),
 };
 
 export function markerDiameterViewBox(kind: MarkerKind): number {
