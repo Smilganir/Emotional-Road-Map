@@ -2,6 +2,8 @@
 
 Vite + React + TypeScript mindfulness “road map” for kids (Hebrew, RTL): illustrated Israel route, journal notes per stop, PDF export.
 
+**Live site:** [smilganir.github.io/Emotional-Road-Map](https://smilganir.github.io/Emotional-Road-Map/)
+
 ## Local development
 
 ```bash
