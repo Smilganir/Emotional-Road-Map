@@ -1,0 +1,48 @@
+:root {
+  --color-cream: #f9f9f7;
+  --color-sage-pale: #eff2eb;
+  --color-sage-mid: #e0e3d8;
+  --color-sage: #b2bca0;
+  --color-sage-deep: #8ca474;
+  --color-text: #2d2d2a;
+  --color-text-muted: #5c5c56;
+  --color-white: #ffffff;
+  --color-map-base: #f4f5f0;
+  --color-map-israel: #f9f9f7;
+  --color-map-golan: #dce3d0;
+  --color-map-wb-fill: rgba(239, 242, 235, 0.45);
+  --color-map-wb-stroke: rgba(140, 164, 116, 0.55);
+  --color-road: #a8b096;
+  --shadow-card: 0 12px 40px rgba(45, 45, 42, 0.08);
+  --radius-card: 14px;
+  --radius-btn: 10px;
+  --font-ui: "Assistant", "Heebo", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  background: var(--color-cream);
+  color: var(--color-text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
