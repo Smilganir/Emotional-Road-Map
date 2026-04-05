@@ -8,6 +8,16 @@ import {
 
 export type MarkerKind = "fuel" | "traffic" | "star";
 
+/** Max characters per stop note (textarea + storage). */
+export const MAX_JOURNAL_CHARS = 150;
+
+/** Same prompt for all stops of each kind; `?` at logical end for RTL. */
+export const PROMPT_BY_KIND: Record<MarkerKind, string> = {
+  fuel: "מה מרגיע אותך ותומך בך ברגעים של עצב או לחץ?",
+  star: "מה עושה לך טוב?",
+  traffic: "מה עושה לך לא טוב (מלחיץ, מכעיס, מעייף...)?",
+};
+
 /** Figma ellipse frame size for traffic/fuel vs star (scaled to `viewBox` for `<image>` width/height). */
 const MARK_FIGMA_DIAMETER: Record<MarkerKind, number> = {
   fuel: 592,
@@ -80,63 +90,63 @@ export const JOURNAL_MARKERS: JournalMarker[] = [
     id: "fuel-1",
     kind: "fuel",
     titleHe: "תחנת דלק ראשונה",
-    promptHe: "מה נותן לך כוח ואנרגיה בימים האלה?",
+    promptHe: PROMPT_BY_KIND.fuel,
     ...figmaToApp(...FIGMA_CENTERS["fuel-1"]),
   },
   {
     id: "traffic-1",
     kind: "traffic",
     titleHe: "פקק ראשון",
-    promptHe: "מה מרגיש לך כמו פקק או עצירה בדרך?",
+    promptHe: PROMPT_BY_KIND.traffic,
     ...figmaToApp(...FIGMA_CENTERS["traffic-1"]),
   },
   {
     id: "star-1",
     kind: "star",
     titleHe: "נקודת עניין ראשונה",
-    promptHe: "מה משהו שגילית על עצמך לאחרונה?",
+    promptHe: PROMPT_BY_KIND.star,
     ...figmaToApp(...FIGMA_CENTERS["star-1"]),
   },
   {
     id: "fuel-2",
     kind: "fuel",
     titleHe: "תחנת דלק שנייה",
-    promptHe: "מי או מה עוזר לך להרגיע את עצמך?",
+    promptHe: PROMPT_BY_KIND.fuel,
     ...figmaToApp(...FIGMA_CENTERS["fuel-2"]),
   },
   {
     id: "traffic-2",
     kind: "traffic",
     titleHe: "פקק שני",
-    promptHe: "איזה רגש או מחשבה מבלבלת אותך לפעמים?",
+    promptHe: PROMPT_BY_KIND.traffic,
     ...figmaToApp(...FIGMA_CENTERS["traffic-2"]),
   },
   {
     id: "star-2",
     kind: "star",
     titleHe: "נקודת עניין שנייה",
-    promptHe: "מה אתה או את מעריכים בעצמכם?",
+    promptHe: PROMPT_BY_KIND.star,
     ...figmaToApp(...FIGMA_CENTERS["star-2"]),
   },
   {
     id: "fuel-3",
     kind: "fuel",
     titleHe: "תחנת דלק שלישית",
-    promptHe: "מה אתם מקווים שיקרה בקרוב?",
+    promptHe: PROMPT_BY_KIND.fuel,
     ...figmaToApp(...FIGMA_CENTERS["fuel-3"]),
   },
   {
     id: "traffic-3",
     kind: "traffic",
     titleHe: "פקק שלישי",
-    promptHe: "מה היית רוצה לשחרר או לעזוב מאחור?",
+    promptHe: PROMPT_BY_KIND.traffic,
     ...figmaToApp(...FIGMA_CENTERS["traffic-3"]),
   },
   {
     id: "star-3",
     kind: "star",
     titleHe: "נקודת עניין שלישית",
-    promptHe: "מה עושה לכם חיוך בלב?",
+    promptHe: PROMPT_BY_KIND.star,
     ...figmaToApp(...FIGMA_CENTERS["star-3"]),
   },
 ];
