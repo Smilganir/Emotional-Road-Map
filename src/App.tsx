@@ -53,7 +53,7 @@ export default function App() {
       <header className="app-header">
         <div className="app-header__inner">
           <div className="app-header__intro">
-            <h1 className="app-title">מפת הרגשות שלי</h1>
+            <h1 className="app-title">מפת הניווט הפנימי שלי</h1>
             <p className="app-lead">
               מסע מחרמון לאילת. לחצו על התחנות לאורך הדרך, כתבו מה עולה בלב — ושמרו. בסוף אפשר להוריד הכל כ־PDF
               ואפילו להדפיס.

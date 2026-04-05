@@ -1,4 +1,4 @@
-# מפת הרגשות שלי (Emotional Road Map)
+# מפת הניווט הפנימי שלי (Emotional Road Map)
 
 Vite + React + TypeScript mindfulness “road map” for kids (Hebrew, RTL): illustrated Israel route, journal notes per stop, PDF export.
 
