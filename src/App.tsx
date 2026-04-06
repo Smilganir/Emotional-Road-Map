@@ -68,6 +68,12 @@ export default function App() {
               className={
                 allStopsComplete ? "btn-export btn-export--ready" : "btn-export btn-export--muted"
               }
+              disabled={!allStopsComplete}
+              title={
+                allStopsComplete
+                  ? undefined
+                  : "השלימו את כל 9 העצירות כדי לייצא PDF"
+              }
               onClick={async () => {
                 try {
                   const { downloadJournalPdf } = await import("./pdf/exportPdf");

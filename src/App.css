@@ -77,15 +77,22 @@
   filter: brightness(1.06);
 }
 
-.btn-export--muted {
-  background: #9aa299;
-  color: #f4f5f3;
-  border-color: var(--color-sage-mid);
-  cursor: pointer;
+/* Disabled look: light grey field + mid-grey label (Material-style #E0E0E0 / #9E9E9E) */
+.btn-export--muted,
+.btn-export:disabled {
+  background: #e0e0e0;
+  color: #9e9e9e;
+  border-color: transparent;
+  cursor: not-allowed;
+  opacity: 1;
+  box-shadow: none;
 }
 
-.btn-export--muted:hover {
-  filter: brightness(1.05);
+.btn-export--muted:hover,
+.btn-export--muted:focus-visible,
+.btn-export:disabled:hover,
+.btn-export:disabled:focus-visible {
+  filter: none;
 }
 
 .app-main {
