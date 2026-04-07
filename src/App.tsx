@@ -95,8 +95,14 @@ export default function App() {
 
       <footer className="app-footer">
         <p>
-          מפת רקע מאוירת (סגנון נקי); צבעי מסלול וכפתורים תואמים את ערכת הצבעים של האפליקציה. נתוני שטח
-          מוצגים לצורכי חוויית משתמש בלבד.
+          <a
+            href="https://www.miricohensmilga.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            מירי כהן סמילגה
+          </a>
+          , מורה למדיטציה, מיינדפולנס ודהרמה
         </p>
       </footer>
 
